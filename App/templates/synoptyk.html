@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+		<form method="POST" action="{{ url_for('get_weather') }}">
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" required>
+			<button type="submit">Get Weather</button>
+		</form>
+		{% if weather %}
+			<div class="result">
+				<h2>{{ weather['city'] }} Weather</h2>
+				<p>Temperature: {{ weather['temperature'] }}&deg;C</p>
+				<p>Weather Description: {{ weather['description'] }}</p>
+			</div>
+		{% endif %}
+		{% if error %}
+		<div id="error-message">
+			<p>Sorry, we couldn't find weather information for {{ error }}</p>
+		</div>
+		{% endif %}
+    </div>
+{% endblock %}

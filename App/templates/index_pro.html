@@ -1,0 +1,58 @@
+{% extends 'base_pro.html' %}
+
+{% block body %}
+	<div class="container">
+		<figure class="text-center">
+          <blockquote class="blockquote">
+            <h1>Weather App</h1>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            The best choice <cite title="Source Title">if you don't want to get wet </cite>
+          </figcaption>
+        </figure>
+		<div>
+			<div id="carouselExampleIndicators" class="carousel slide">
+				  <div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <img src="https://pibig.info/uploads/posts/2021-12/1639063020_29-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-34.jpg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item">
+					  <img src="https://pibig.info/uploads/posts/2021-12/thumbs/1639063013_31-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-36.jpg" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+					  <img src="https://pibig.info/uploads/posts/2021-12/thumbs/1639063077_32-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-38.jpg" class="d-block w-100" alt="...">
+					</div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+		</div>
+
+		<h2>What our website is for?</h2>
+		<div>
+			<p>Welcome to Weather Now, your go-to destination for up-to-the-minute weather updates in your city! We understand the importance of accurate and real-time weather information, and that's exactly what we provide. With Weather Now, you can instantly access the current weather conditions in your city, ensuring you stay prepared for whatever Mother Nature has in store for you. Whether you're planning your day, deciding what to wear, or simply curious about the weather outside, we've got you covered. Our user-friendly interface allows you to effortlessly navigate through the site and retrieve the most relevant weather data in just a few clicks. As soon as you land on Weather Now, you'll find a prominently displayed search bar where you can input your city name. In an instant, you'll be presented with the latest temperature, humidity, wind speed, and atmospheric conditions for your location. Our commitment to accuracy is unwavering. Weather Now sources data from reliable meteorological agencies and employs advanced forecasting algorithms to ensure you receive the most precise weather information available. We understand the importance of timely updates, and our dedicated team works tirelessly to keep the data constantly refreshed. So, whether you're an outdoor enthusiast, a frequent traveler, or simply want to stay informed about the weather in your city, Weather Now is your ultimate companion. Join us today and experience the power of real-time weather knowledge at your fingertips!</p>
+		</div>
+		<hr>
+	</div>
+	<footer>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="https://t.me/WeatherFrom_bot">
+             <img src="https://cdn-icons-png.flaticon.com/512/123/123726.png" alt="Bootstrap" width="50" height="50">
+              Telegram
+          </a>
+        </div>
+      </nav>
+    </footer>
+{% endblock %}

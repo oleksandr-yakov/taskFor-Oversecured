@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<div class="container">
+		<figure class="text-center">
+          <blockquote class="blockquote">
+            <h1>Weather Now</h1>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            The best choice <cite title="Source Title">if you don't want to get wet </cite>
+          </figcaption>
+        </figure>
+		<div>
+			<div id="carouselExampleIndicators" class="carousel slide">
+				  <div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <img src="https://pibig.info/uploads/posts/2021-12/1639063020_29-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-34.jpg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item">
+					  <img src="https://pibig.info/uploads/posts/2021-12/thumbs/1639063013_31-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-36.jpg" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+					  <img src="https://pibig.info/uploads/posts/2021-12/thumbs/1639063077_32-pibig-info-p-chyorno-belie-peizazhi-priroda-krasivo-fot-38.jpg" class="d-block w-100" alt="...">
+					</div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+		</div>
+
+		<h2>What our website is for?</h2>
+		<div>
+			<p>Welcome to Weather Now, your go-to destination for up-to-the-minute weather updates in your city! We understand the importance of accurate and real-time weather information, and that's exactly what we provide. With Weather Now, you can instantly access the current weather conditions in your city, ensuring you stay prepared for whatever Mother Nature has in store for you. Whether you're planning your day, deciding what to wear, or simply curious about the weather outside, we've got you covered. Our user-friendly interface allows you to effortlessly navigate through the site and retrieve the most relevant weather data in just a few clicks. As soon as you land on Weather Now, you'll find a prominently displayed search bar where you can input your city name. In an instant, you'll be presented with the latest temperature, humidity, wind speed, and atmospheric conditions for your location. Our commitment to accuracy is unwavering. Weather Now sources data from reliable meteorological agencies and employs advanced forecasting algorithms to ensure you receive the most precise weather information available. We understand the importance of timely updates, and our dedicated team works tirelessly to keep the data constantly refreshed. So, whether you're an outdoor enthusiast, a frequent traveler, or simply want to stay informed about the weather in your city, Weather Now is your ultimate companion. Join us today and experience the power of real-time weather knowledge at your fingertips!</p>
+		</div>
+		<hr>
+	</div>
+	<footer>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-xxl">
+          <a class="navbar-brand" href="https://t.me/WeatherFrom_bot">
+             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAnFBMVEVBtOb///8AkcjS0te5ub43seUAjcYAj8cAisX6/f6U0O+o2fIrr+Q8sePm9PtnwOrD5PXO6fee1PBtw+rc7/lSueiJzO5YvOh8yOwaq+Pw+P0TlswAhsPg6O03mszZ4efQ2N+Nw+G1vcVhrNVyttq62+9JotKrzuXFzNRQp9OBvd3S4utspsuZyuWNudPAw8qzxtWntMCjwdREmMOGTFUFAAAHN0lEQVR4nNWb6XajOBBGBbZA2IDBxrvjxO0sdjKZzkze/91GYrOEdhnSZ+pXupPDd1VVKhVCAp6LpXk2nawW6+USgOVyvVhNplmeOj0K2GvPF0sA4xhC0Bok/wbLxdyewgogKuYzEMMESCyBMZjNi2gggGKy3EKZNuWN7XJS9A+QTqGJesMAp6axMAPINyA2Va8sBpu8N4B8AY0HT7kBLkwQ9ADFIpZmndqSeKFPBh1Autk6ypcI240uFzQAc+DgfNogmN8BUKzvlC8R1so4qACmrsFnLYmnTgDp2nLmyS1eyzNBCpDJK669JTCzBZj2NvzKpGGQAKx61scEKwuAaNa7PiaYCVdJEcCuj9nHG1zvzADSYfQJgWAy8AADjb8i4H3AAUTD6RMCLg84gNmA+phgpgPof/6xxs3GDkDf9UdAMFUBZIPrY4JMDpAOGv/GYCoFWPe4/sgtWcsAhk+Aypg0oACKH9LHBIUQ4GcCQIwOwg1g/iMZWBmc8wDpz8kTSzmAzXAOgHxywU0XoNgOpJ7Ey/nuzKXXtugALIbJwBhu8shL93738cmCBciHmIIQrudlrDPk77sEcc4ADOCAeEsGX9oJ+RxB44IKIO87A+F2Pb31HtfA5wlgTgH0PAVisKI3inZ+6PME9UQAvdcAGM9e2NYvJw4Q+CBtAXpcheJ4xe2LvCFfRFCtSSVAXwEgg7+5vv3pHPpCAtgA9FOEcMWZ0K3Grv1H44AuQVmMCMCkj20IMMvoyEePD82P6cEXE8BJBRAt71VPYjBnt0F2TzeaN8oDLMEyKgHujUAcL7pv/48XyhvPgS8hIDEAdzYCkKw1HfndiBq/F72GvoSAtAUYYHbH4EFbbm+CD4y+l7IOYAhmBMC5CuHBC3aEd0+svpcdugAUQYoBHBdCUcUh0R+NnlifvHMeuBHgJRE4pQCuOFPRfgceflffu4Y8QEOAkwDYr8S44qyEHyUiPHxOP92LAGoCvCYDz7IK4C7jRbTVUg2f0/dyJNJvCJYesMvBOJZ+DXm4EH3uvz8lADVBCix6EchXHHb4o0f+F1dBDt4IYA5M38i7aw1jeO5L9HfiFGgI4gyY9QIQzjL5x7Bq+CL9thmREMApMFgKky2Yq747VMMX6ndWIo4gnoCVDoC09gp1L6qGP3oQ/vYsj0BpK7BQuz5eaz7A1cOX6HtKB/h+eAVr1eAFaw1rdfSl+im/EHSCABR1aDkVVxxq+JdK/iLz0ovOA0qAtw+1fDv8kTRKopWo4wFVBPzjSRGCJvqjkdRRXDPCmzIFEx8Fryfx1/Db8OX63k7nAAygXIsSHCWEMAM//Esjf1GkqaAZ4UKgXgyTPcmU4OCfmFpADZ9b/mjTpgBOQtU0bAgIQ3A8fTRat+ir9bVliHhAXYjKKNSwOB/eST5ET6b6kmaE9sCrvhQn1N8HOB8+Rqb63oemCuAHPhssRnUUGj/8Rekr5RXNyA3g3WQ5Zgn2rf6j7rSKvBlpDL0ZNSQMAbqY6u+OOn0fvZi1ZEwe/F3Pf91CoW5G6oflhk0p5YPwWgH8Ggs7EMrUzUj1sMK0LacI9lUMfo/HqiLoca/FIjuav5jcCNBXAzAeK8MQastQcLV4NWvzIHguAcalSRoRYjvtQuCjk83LaeOD8FjnQGnyMOiaEQLwYvV63kbh6+aB8fi3LAzalcgP/cJug6ImqCZiAzD+R/y6ZNCMhK+R5RZNlQfBmZSBFuCIIylKAYMqcLLepKr6A58G+A599CoIQ67PwUNuv01XEgRfbQ7++iaODkM+DCdtDob7yGGjkhCQJPjdjr98VnDqzgZ9MxK8ey5btaRP/G488N2qoCsbht1RC3DIPKfNauwDVHvgmxIJfKZt1DcjYeh5btv1yR79Szzw65sdJDMb9M0I+mwBbLcKE/+vUWf8XBi0KRCGRQtg/ckmOV4E+jgM+yYMkbYZCc7eDcD6o1X8JdInLeNnBVBoUxDRH63sNwvfhfp+GwZtM4JXYhrAer+WaRPZJ5dh0DYjh4wBcNgvlRKEAQ6D9LfNH9UOuOfjtfzp6JzqInDIOwAu3y7lowyQJgfrKUADOHw2kEdBZ2FQcAAu2/bOBFTNvPMQi6MDjpEIwOkYj5MPELVs3XuQySUKzKJ191Eue4LgGMkA3A6zWeqHgfwwm9txPksf4JcROYDbSQIrgm4P38uRTgsC9OypAdwOtSZ65cqC127z3NOxXkMfBEfuDaavg81GBAL9/o52GxAER6Oj3c4+cBl/v8f71T4QvsH2e8FBGQX0LN5K6fWKh4JAvIegAHC75CIjCDr11wTA8ZqPkACJ0l8L4HbRSeCDUOp+HYDTVa8uQYiOyi+//V92YwmCkNs6sQJwue5HVaTgcNbdOBziwmPjgwBd9XcuB7nySQhCLC898GEJYH/pNdmj8GwiP9i13+TT9Orx/+bic2l/+Op3ZX/08jtF0dv1//8AcDuKWx6rUN8AAAAASUVORK5CYII=" alt="Bootstrap" width="50" height="50">
+              Telegram
+          </a>
+        </div>
+      </nav>
+    </footer>
+
+{% endblock %}
+

@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: once_app
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
+    restart: on-failure
+    networks:
+      main-net:
+        ipv4_address: 172.16.238.2
+
+  db:
+    image: mysql:8.0
+    container_name: once_mysql
+    environment:
+      MYSQL_DATABASE: prodMain
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: Ag111^@ergnuio
+      MYSQL_ROOT_PASSWORD: nuhayserver
+    ports:
+      - '3305:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      main-net:
+        ipv4_address: 172.16.238.3
+
+  nginx:
+    image: nginx
+    container_name: once_nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
+    restart: always
+    networks:
+      main-net:
+        ipv4_address: 172.16.238.5
+
+volumes:
+  db_data:
+
+
+networks:
+  main-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24
+
+
+
+# new commit
+
+

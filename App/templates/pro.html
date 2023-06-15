@@ -1,0 +1,29 @@
+{% extends 'base_pro.html' %}
+{% block body %}
+    <div class="container">
+		<form method="POST" action="{{ url_for('ProGet_weather') }}">
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" required>
+			<button type="submit">Get  ProWeather</button>
+		</form>
+		{% if weatherPro %}
+			<div class="result">
+				<h2>{{ weatherPro['city'] }} Weather</h2>
+				<p>Temperature: {{ weatherPro['temperature'] }}&deg;C</p>
+				<p>Description: {{ weatherPro['pro_description'] }}</p>
+				<p>Temperature Feels Like: {{ weatherPro['feels_like'] }}</p>
+				<p>Speed of Wind: {{ weatherPro['speed'] }}</p>
+				<p>Humidity: {{ weatherPro['humidity'] }}</p>
+				<p>Pressure: {{ weatherPro['pressure'] }}</p>
+				<p>Sunrise: {{ weatherPro['sunrise'] }}</p>
+				<p>Sunset: {{ weatherPro['sunset'] }}</p>
+				<p>Bright Part Of The Day: {{ weatherPro['bright_PartOfTheDay'] }}</p>
+			</div>
+		{% endif %}
+		{% if error %}
+		<div id="error-message">
+			<p>{{ error }}</p>
+		</div>
+		{% endif %}
+    </div>
+{% endblock %}
