@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 db = mysql.connector.connect(
     port="3306",
-    host='172.16.238.3',  #172.16.238.3 #localhost
+    host='localhost',  #172.16.238.3 #localhost
     user='dev',
     password='Ag111^@ergnuio',
     database='prodMain'
@@ -94,6 +94,7 @@ def register():
         values = (username, password)
         cursor.execute(query, values)
         db.commit()
+        cursor.close()
 
         return render_template('pro.html')
 
@@ -111,12 +112,13 @@ def login():
         values = (username, password)
         cursor.execute(query, values)
         user = cursor.fetchone()
-
+        cursor.close()
         if user:
             return render_template('pro.html')
         else:
             error_message = f"Sorry, but you entered the Invalid email or password"
             return render_template('login.html', errorlogin=error_message)
+
 
     return render_template('login.html')
 
